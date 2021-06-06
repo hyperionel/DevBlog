@@ -7,16 +7,18 @@ Rails.application.routes.draw do
   get 'about', to: 'home#about'
 
   namespace :api do
-    resources :posts do
-      collection do
-        get :index
-      end
+    namespace :v1 do
+      resources :posts do
+        collection do
+          get :index
+        end
 
-      member do
-        get  :show # has to be here because of the star route below
-        post :create
-        post :destroy
-        put  :edit
+        member do
+          get  :show # has to be here because of the star route below
+          post :create
+          post :destroy
+          put  :edit
+        end
       end
     end
   end
