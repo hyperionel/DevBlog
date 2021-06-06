@@ -15,3 +15,16 @@ ActiveStorage.start()
 var componentRequireContext = require.context("components", true);
 var ReactRailsUJS = require("react_ujs");
 ReactRailsUJS.useContext(componentRequireContext);
+
+require("bootstrap")
+
+import "@fortawesome/fontawesome-free/css/all"
+import "highlightjs"
+import "../stylesheets/application";
+
+document.addEventListener("turbolinks:load", function() {
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+    $('[data-toggle="popover"]').popover()
+  })
+})
