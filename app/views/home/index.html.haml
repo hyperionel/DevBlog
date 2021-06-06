@@ -1,0 +1,154 @@
+%body
+  %header.header.text-center
+    %h1.blog-name.pt-lg-4.mb-0
+      %a{:href => "index.html"} Anthony's Blog
+    %nav.navbar.navbar-expand-lg.navbar-dark
+      %button.navbar-toggler{"aria-controls" => "navigation", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navigation", "data-toggle" => "collapse", :type => "button"}
+        %span.navbar-toggler-icon
+      #navigation.collapse.navbar-collapse.flex-column
+        .profile-section.pt-3.pt-lg-0
+          %img.profile-image.mb-3.rounded-circle.mx-auto{:alt => "image", :src => "assets/images/profile.png"}/
+          .bio.mb-3
+            Hi, my name is Anthony Doe. Briefly introduce yourself here. You can also provide a link to the about page.
+            %br/
+            %a{:href => "about.html"} Find out more about me
+          / //bio
+          %ul.social-list.list-inline.py-3.mx-auto
+            %li.list-inline-item
+              %a{:href => "#"}
+                %i.fab.fa-twitter.fa-fw
+            %li.list-inline-item
+              %a{:href => "#"}
+                %i.fab.fa-linkedin-in.fa-fw
+            %li.list-inline-item
+              %a{:href => "#"}
+                %i.fab.fa-github-alt.fa-fw
+            %li.list-inline-item
+              %a{:href => "#"}
+                %i.fab.fa-stack-overflow.fa-fw
+            %li.list-inline-item
+              %a{:href => "#"}
+                %i.fab.fa-codepen.fa-fw
+          %hr/
+        / //profile-section
+        %ul.navbar-nav.flex-column.text-left
+          %li.nav-item.active
+            %a.nav-link{:href => "index.html"}
+              %i.fas.fa-home.fa-fw.mr-2>
+              Blog Home
+              %span.sr-only (current)
+          %li.nav-item
+            %a.nav-link{:href => "blog-post.html"}
+              %i.fas.fa-bookmark.fa-fw.mr-2>
+              Blog Post
+          %li.nav-item
+            %a.nav-link{:href => "about.html"}
+              %i.fas.fa-user.fa-fw.mr-2>
+              About Me
+        .my-2.my-md-3
+          %a.btn.btn-primary{:href => "https://themes.3rdwavemedia.com/", :target => "_blank"} Get in Touch
+  .main-wrapper
+    %section.cta-section.theme-bg-light.py-5
+      .container.text-center
+        %h2.heading DevBlog - A Blog Template Made For Developers
+        .intro Welcome to my blog. Subscribe and get my latest blog post in your inbox.
+        %form.signup-form.form-inline.justify-content-center.pt-3
+          .form-group
+            %label.sr-only{:for => "semail"} Your email
+            %input#semail.form-control.mr-md-1.semail{:name => "semail1", :placeholder => "Enter email", :type => "email"}/
+          %button.btn.btn-primary{:type => "submit"} Subscribe
+    %section.blog-list.px-3.py-5.p-md-5
+      .container
+        .item.mb-5
+          .media
+            %img.mr-3.img-fluid.post-thumb.d-none.d-md-flex{:alt => "image", :src => "assets/images/blog/blog-post-thumb-1.jpg"}/
+            .media-body
+              %h3.title.mb-1
+                %a{:href => "blog-post.html"} Why Every Developer Should Have A Blog
+              .meta.mb-1
+                %span.date Published 2 days ago
+                %span.time 5 min read
+                %span.comment
+                  %a{:href => "#"} 8 comments
+              .intro Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies...
+              %a.more-link{:href => "blog-post.html"} Read more →
+        .item.mb-5
+          .media
+            %img.mr-3.img-fluid.post-thumb.d-none.d-md-flex{:alt => "image", :src => "assets/images/blog/blog-post-thumb-2.jpg"}/
+            .media-body
+              %h3.title.mb-1
+                %a{:href => "blog-post.html"} A Guide to Becoming a Full-Stack Developer
+              .meta.mb-1
+                %span.date Published 3 months ago
+                %span.time 3 min read
+                %span.comment
+                  %a{:href => "#"} 26 comments
+              .intro Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies...
+              %a.more-link{:href => "blog-post.html"} Read more →
+        .item.mb-5
+          .media
+            %img.mr-3.img-fluid.post-thumb.d-none.d-md-flex{:alt => "image", :src => "assets/images/blog/blog-post-thumb-3.jpg"}/
+            .media-body
+              %h3.title.mb-1
+                %a{:href => "blog-post.html"} High Performance JavaScript
+              .meta.mb-1
+                %span.date Published 1 month ago
+                %span.time 8 min read
+                %span.comment
+                  %a{:href => "#"} 12 comments
+              .intro Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies...
+              %a.more-link{:href => "blog-post.html"} Read more →
+        .item.mb-5
+          .media
+            %img.mr-3.img-fluid.post-thumb.d-none.d-md-flex{:alt => "image", :src => "assets/images/blog/blog-post-thumb-4.jpg"}/
+            .media-body
+              %h3.title.mb-1
+                %a{:href => "blog-post.html"} Top 5 JavaScript Frameworks
+              .meta.mb-1
+                %span.date Published 2 months ago
+                %span.time 15 min read
+                %span.comment
+                  %a{:href => "#"} 3 comments
+              .intro Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies...
+              %a.more-link{:href => "blog-post.html"} Read more →
+        .item.mb-5
+          .media
+            %img.mr-3.img-fluid.post-thumb.d-none.d-md-flex{:alt => "image", :src => "assets/images/blog/blog-post-thumb-5.jpg"}/
+            .media-body
+              %h3.title.mb-1
+                %a{:href => "blog-post.html"} Learn React in 24 Hours
+              .meta.mb-1
+                %span.date Published 2 months ago
+                %span.time 10 min read
+                %span.comment
+                  %a{:href => "#"} 23 comments
+              .intro Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies...
+              %a.more-link{:href => "blog-post.html"} Read more →
+        .item
+          .media
+            %img.mr-3.img-fluid.post-thumb.d-none.d-md-flex{:alt => "image", :src => "assets/images/blog/blog-post-thumb-6.jpg"}/
+            .media-body
+              %h3.title.mb-1
+                %a{:href => "blog-post.html"} About Remote Working
+              .meta.mb-1
+                %span.date Published 3 months ago
+                %span.time 2 min read
+                %span.comment
+                  %a{:href => "#"} 1 comment
+              .intro Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies...
+              %a.more-link{:href => "blog-post.html"} Read more →
+        %nav.blog-nav.nav.nav-justified.my-5
+          %a.nav-link-prev.nav-item.nav-link.d-none.rounded-left{:href => "#"}
+            Previous
+            %i.arrow-prev.fas.fa-long-arrow-alt-left
+          %a.nav-link-next.nav-item.nav-link.rounded{:href => "#"}
+            Next
+            %i.arrow-next.fas.fa-long-arrow-alt-right
+    %footer.footer.text-center.py-2.theme-bg-dark
+      / /* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */
+      %small.copyright
+        Designed with
+        %i.fas.fa-heart{:style => "color: #fb866a;"}
+        by
+        %a{:href => "http://themes.3rdwavemedia.com", :target => "_blank"} Xiaoying Riley
+        for developers
