@@ -2,6 +2,6 @@ class HomeController < ApplicationController
   def index
   end
 
-  def about_me
+  def about
   end
 end

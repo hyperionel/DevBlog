@@ -1,0 +1,49 @@
+%header.header.text-center
+  %h1.blog-name.pt-lg-4.mb-0
+    %a{:href => "index.html"} Anthony's Blog
+  %nav.navbar.navbar-expand-lg.navbar-dark
+    %button.navbar-toggler{"aria-controls" => "navigation", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navigation", "data-toggle" => "collapse", :type => "button"}
+      %span.navbar-toggler-icon
+    #navigation.collapse.navbar-collapse.flex-column
+      .profile-section.pt-3.pt-lg-0
+        %img.profile-image.mb-3.rounded-circle.mx-auto{:alt => "image", :src => "assets/images/profile.png"}/
+        .bio.mb-3
+          Hi, my name is Anthony Doe. Briefly introduce yourself here. You can also provide a link to the about page.
+          %br/
+          %a{:href => "about.html"} Find out more about me
+        / //bio
+        %ul.social-list.list-inline.py-3.mx-auto
+          %li.list-inline-item
+            %a{:href => "#"}
+              %i.fab.fa-twitter.fa-fw
+          %li.list-inline-item
+            %a{:href => "#"}
+              %i.fab.fa-linkedin-in.fa-fw
+          %li.list-inline-item
+            %a{:href => "#"}
+              %i.fab.fa-github-alt.fa-fw
+          %li.list-inline-item
+            %a{:href => "#"}
+              %i.fab.fa-stack-overflow.fa-fw
+          %li.list-inline-item
+            %a{:href => "#"}
+              %i.fab.fa-codepen.fa-fw
+        / //social-list
+        %hr/
+      / //profile-section
+      %ul.navbar-nav.flex-column.text-left
+        %li.nav-item
+          %a.nav-link{:href => "index.html"}
+            %i.fas.fa-home.fa-fw.mr-2>
+            Blog Home
+            %span.sr-only (current)
+        %li.nav-item
+          %a.nav-link{:href => "blog-post.html"}
+            %i.fas.fa-bookmark.fa-fw.mr-2>
+            Blog Post
+        %li.nav-item.active
+          %a.nav-link{:href => "about.html"}
+            %i.fas.fa-user.fa-fw.mr-2>
+            About Me
+      .my-2.my-md-3
+        %a.btn.btn-primary{:href => "https://themes.3rdwavemedia.com/", :target => "_blank"} Get in Touch

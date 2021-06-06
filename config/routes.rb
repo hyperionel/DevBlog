@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   root to: 'home#index'
 
-  get 'about_me', to: 'home#about_me'
+  get 'about', to: 'home#about'
 
   namespace :api do
     resources :posts do
