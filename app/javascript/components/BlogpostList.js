@@ -23,7 +23,7 @@ const BlogpostList = ({ data, isLoading, error }) => {
   return (
     <section className="blog-list px-3 py-5 p-md-5">
       <div className="container">
-        {data.map( post, index =>
+        {data.map((post, index) =>
           <BlogpostDisplay key={index} data={post} />
         )}
       </div>
