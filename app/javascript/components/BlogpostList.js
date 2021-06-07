@@ -3,7 +3,7 @@ import React from "react"
 import withFetching from './utils/withFetching'
 import BlogpostDisplay from './BlogpostDisplay'
 
-const API = '/api/v1/blogposts'
+const API = '/api/v1/posts'
 const DEFAULT_QUERY = ''
 
 const BlogpostList = ({ data, isLoading, error }) => {
@@ -23,8 +23,8 @@ const BlogpostList = ({ data, isLoading, error }) => {
   return (
     <section className="blog-list px-3 py-5 p-md-5">
       <div className="container">
-        {blogposts.map( blogpost =>
-          <BlogpostDisplay data={blogpost} />
+        {data.map( post, index =>
+          <BlogpostDisplay key={index} data={post} />
         )}
       </div>
     </section>
