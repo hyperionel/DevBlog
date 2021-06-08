@@ -1,40 +1,40 @@
-class Api::V1::PostsController < ActionController::API
+class Api::V1::PostsController < Api::V1::BaseController
   def index
-    fake_data = [
-      {
-        img: 'src',
-        title: 'Blog title',
-        published_date: 'today',
-        read_time: '5 min',
-        comments: '10',
-        excerpt: 'Lorem ipsum blah blah blah'
-      },
-      {
-        img: 'src',
-        title: 'Blog title 2',
-        published_date: 'today',
-        read_time: '5 min',
-        comments: '10',
-        excerpt: 'Lorem ipsum blah blah blah'
-      },
-      {
-        img: 'src',
-        title: 'Blog title 3',
-        published_date: 'today',
-        read_time: '5 min',
-        comments: '10',
-        excerpt: 'Lorem ipsum blah blah blah'
-      },
-      {
-        img: 'src',
-        title: 'Blog title 4',
-        published_date: 'today',
-        read_time: '5 min',
-        comments: '10',
-        excerpt: 'Lorem ipsum blah blah blah'
-      }
-    ]
-    
-    render json: fake_data
+    render json: Post.all
   end
+
+  def show; end
+
+  def edit; end
+
+  def update
+    @post.update_attributes(post_params)
+
+    render json: presented_post
+  end
+
+  def create
+    @post = Post.create(post_params)
+
+    render json: presented_post
+  end
+
+  def destroy
+    if @post.destroy
+      render json: true
+    else
+      raise 'Fail'
+    end
+  end
+
+  private
+
+    def presented_post
+      PostPresenter.new(@post).present
+    end
+  
+    def post_params
+      params.require(:post)
+        .permit(:title, :slug, :excerpt, :content, :read_time)
+    end
 end
