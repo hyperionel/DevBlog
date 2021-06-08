@@ -8,19 +8,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :posts do
-        collection do
-          get :index
-        end
-
-        member do
-          get  :show # has to be here because of the star route below
-          post :create
-          post :destroy
-          put  :edit
-        end
-      end
+      resources :posts
     end
   end
-
 end
