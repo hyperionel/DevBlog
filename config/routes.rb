@@ -13,8 +13,8 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
-    get  '/', to: 'admin#login'
-    get  'dashboard', to: 'admin#dashboard'
+    get  '/', to: 'admin#dashboard'
+    get  '/login', to: 'admin#login'
     post '/', to: 'admin#do_auth'
   end
 end
