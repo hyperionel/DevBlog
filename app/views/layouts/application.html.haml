@@ -8,11 +8,6 @@
     = csp_meta_tag
     = javascript_pack_tag 'blog', 'data-turbolinks-track': 'reload'
   %body
-    - if notice
-      %p.alert.alert-success= notice
-    - if alert
-      %p.alert.alert-danger= alert
-
     = render partial: 'layouts/header'
   
     = yield

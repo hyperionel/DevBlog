@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  devise_for :admins
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-
+  devise_for :admins,
+    path: '/admin',
+    path_names: { sign_in: 'login', sign_out: 'logout' },
+    controllers: { sessions: 'admin/sessions' }
+  
   root to: 'home#index'
 
   get 'about', to: 'home#about' 
@@ -14,7 +16,5 @@ Rails.application.routes.draw do
 
   namespace :admin do
     get  '/', to: 'admin#dashboard'
-    get  '/login', to: 'admin#login'
-    post '/', to: 'admin#do_auth'
   end
 end

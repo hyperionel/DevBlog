@@ -45,3 +45,13 @@ body {
 		border-top-right-radius: 0;
 	}
 }
+
+.alert {
+	position: absolute;
+	padding: 1rem 1rem;
+	margin-bottom: 1rem;
+	border: 1px solid transparent;
+	width: 100%;
+	top: 0px;
+	text-align: center;
+}

@@ -1,4 +1,4 @@
-= form_for(:admin, url: session_path(:admin), html: { class: 'form-signin' }) do |f|
+= form_for(:admin, url: admin_session_path(), html: { class: 'form-signin' }) do |f|
   %h1.h3.mb-3.font-weight-normal Log in
   = f.label :email, class: 'sr-only'
   = f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control'

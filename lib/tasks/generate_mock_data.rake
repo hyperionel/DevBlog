@@ -1,4 +1,4 @@
-namespace :bootstrap do
+namespace :generate_mock_data do
   desc 'Setup some initial posts'
   task :create_fake_posts => :environment do
     Post.create(
