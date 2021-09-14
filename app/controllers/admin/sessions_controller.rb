@@ -3,7 +3,7 @@ class Admin::SessionsController < ::Devise::SessionsController
 
   protected
 
-  def after_sign_in_path(resource)
-    binding.pry
+  def after_sign_in_path_for(resource)
+    '/admin/dashboard'
   end
 end
