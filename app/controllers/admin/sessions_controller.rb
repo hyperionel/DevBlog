@@ -1,5 +1,5 @@
 class Admin::SessionsController < ::Devise::SessionsController
-  layout 'authentication_layout'
+  layout 'admin_application'
 
   protected
 
